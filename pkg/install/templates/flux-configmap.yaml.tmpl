@@ -1,0 +1,10 @@
+---{{ if .SSHHostKey }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flux-ssh-config{{ if .Namespace }}
+  namespace: {{ .Namespace }}{{ end }}
+data:
+  known_hosts: |
+    {{ .SSHHostKey }}
+{{ end }}

@@ -24,6 +24,7 @@ type TemplateParameters struct {
 	GitReadOnly             bool
 	RegistryDisableScanning bool
 	Namespace               string
+	SSHHostKey              string
 	ManifestGeneration      bool
 	AdditionalFluxArgs      []string
 	AddSecurityContext      bool
